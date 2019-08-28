@@ -1,0 +1,28 @@
+
+.cropper-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .content {
+    position: relative;
+    width: 100;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+    .options {
+      display: flex;
+    }
+  }
+
+  h1 {
+    color: beige;
+  }
+
+  app-image-cropper {
+    margin: 25px 0 35px 0;
+  }
+}

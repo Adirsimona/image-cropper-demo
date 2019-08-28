@@ -1,0 +1,42 @@
+<div class="cropper-main">
+  <div class="content">
+    <h1>Image Cropper</h1>
+    <!-- cropper -->
+    <app-image-cropper
+     [src]="imageSrc"
+     [shape]="currShape"
+     [selectedFile]="selectedFile"
+     (cropperChange)="onCropperChange($event)"
+     ></app-image-cropper>
+    <div class="options row">
+      <!-- select file -->
+      <div class="file">
+          <label class="file-label">
+            <input class="file-input" type="file" accept='image/*' name="photo" (change)="onFileChanged($event)">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a file…
+              </span>
+            </span>
+          </label>
+        </div>
+
+
+      <ng-container *ngIf="isFileChoose">
+        <!-- select shape -->
+        <div class="select is-rounded" *ngIf="isFileChoose">
+            <select [(ngModel)]="currShape" (change)="onShapeChange($event)">
+              <option *ngFor="let shape of shapes" [value]="shape.value">{{ shape.label }}</option>
+            </select>
+        </div>
+        <!-- upload -->
+        <a class="button is-success" (click)="upload()">Upload to server</a>
+      </ng-container>
+
+
+    </div>
+  </div>
+</div>

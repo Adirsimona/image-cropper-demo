@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.rounded {
+  .cropper-view-box,
+  .cropper-face {
+    border-radius: 50%;
+  }
+}
+
+body {
+  background: linear-gradient(to top, rgb(8, 74, 74) 0%, rgb(51, 8, 103) 100%);
+  height: 100vh;
+}

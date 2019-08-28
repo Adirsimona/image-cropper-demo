@@ -1,0 +1,4 @@
+<div class="img-container" [ngClass]="{'rounded': shape === '2'}">
+  <img #image [src]="src" crossorigin>
+</div>
+<img *ngIf="imageDestination" [src]="imageDestination" class="img-preview">
